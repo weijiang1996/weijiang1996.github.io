@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/art-drama.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/art.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			
+			<!--导航栏，用列表ul-li实现-->
+			<div id="nav">
+				<div id="navzi">
+					<ul id="ul1">
+				<a href="index.html"><li>首页</li></a>
+				<a href="custom.html"><li>传统民俗
+					<ul class="list1">
+						<a href='custom.html'><li>民间工艺</li></a>
+						<a href='festival.html'><li>节日习俗</li></a>
+						<a href='kongfu.html'><li>中华武术</li></a>
+					</ul>
+				</li></a>
+				<a href='art-drama.html'><li>传统艺术
+					<ul class="list1">
+						<a href='art-drama.html'><li>戏曲</li></a>
+						<a href='art-calligraphy.html'><li>书法</li></a>
+						<a href='art-painting.html'><li>国画</li></a>
+					</ul>
+				</li></a>
+				<a href='儒家.html'><li>诸子百家
+					<ul class="list1">
+						<a href='儒家.html'><li>儒家学派</li></a>
+						<a href='道家.html'><li>道家学派</li></a>
+						<a href='墨家.html'><li>墨家学派</li></a>
+					</ul>
+				</li></a>
+				<a href='artist.html'><li>饮食文化
+					<ul class="list1">
+						<a href='artist.html'><li>饮食艺术</li></a>
+						<a href="food.html"><li>饮食文化发展史</li></a>
+						<a href='Food_drink.html'><li>八大菜系</li></a>
+					</ul>
+				</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+				</ul>
+				</div>
+			</div>
+			
+			
+			
+			
+			<!--主体部分-->
+			<div id="main" class="main">
+				<!--
+					主体头部为轮播图
+					界面效果：页面加载完后，每隔大概一秒的时间，就切换图片，循环播放
+							用户也可以通过点击轮播上的左右按键，自行控制上一张或下一张图片
+					实现方法：
+							通过js改变图片的display样式（block和none），实现图片切换
+							通过设置定时器（setinterval）进行循环
+							通过给左右按键注册点击事件，在事件中修改图片display样式
+				-->
+				<div id="main-pic" class="mainhead">
+					<div id="box" class="mainheadImg">
+						<!--轮播图的三张图片-->
+						<ul id="ulimg">
+							<li style="display: block;"><img src="img3/2.jpg"/></li>
+							<li><img src="img3/2b.jpg"/></li>
+							<li><img src="img3/2c.jpg"/></li>
+						</ul>
+						<!--轮播图左右（上一张和下一张）按键-->
+						<div id="arr">
+							<div id="arrLeft"> < </div>
+							<div id="arrRight"> > </div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--主体内容-->
+				<div id="main-body">
+					
+					<!--设置三个导航菜单（京剧，书法，国画），用3个div实现-->
+					<div id="selc">
+						<a href="art-drama.html">
+							<div id="selctop">
+								戏剧
+						
+							</div>
+						</a>
+						<a href="art-calligraphy.html">
+							<div id="selcmiddle">
+								书法
+							</div>
+						</a>
+						<a href="art-painting.html">
+							<div id="selcbottom">
+								国画
+							</div>
+						</a>
+					</div>
+					
+					<!--
+					戏剧的简介与相关作品欣赏
+						界面效果：鼠标移动到展示的相应作品（图片）上时，会有阴影视觉效果
+						实现方法：通过css样式，在每个作品模块上添加hover样式，hover中添加
+								box-shadow,实现简单阴影效果
+					-->
+					<div id="dramafu">
+						<div id="drama" class="drama">
+							
+							<!--内容：戏剧的简介，百科-->
+							<div class="dramatext">
+								<img src="img3/3.jpg">
+								<span>中国戏剧（China Drama）</span>
+								<p>
+									
+									 主要包括戏曲和话剧，戏曲是中国传统戏剧，经过长期的发展演变
+
+									，逐步形成了以“京剧、越剧、黄梅戏、评剧、豫剧”中国五大戏曲剧种为核心的中华戏曲百
+
+									花苑。话剧则是20世纪引进的西方戏剧形式。 中国古典戏曲是中华民族文化的一个重
+
+									要组成部分，堪称国粹，她以富于艺术魅力的表演形式，为历代人民群众所喜闻乐见。而且，
+
+									在世界剧坛上也占有独特的位置，与古希腊悲喜剧、印度梵剧并称为世界三大古剧。
+								</p>
+								<span>起源</span><br />
+								<p>
+									
+									戏曲的形成，最早可以追溯秦汉时代。但形成过程相当漫长，到了宋元之际才得成型。成熟的
+
+									戏曲要从元杂剧算起，经历明、清的不断发展成熟而进入现代，历八百多年繁盛不败，如今有
+
+									360多个剧种。中国古典戏曲在其漫长的发展过程中，曾先后出现了宋元南戏、元代杂剧、明清
+
+									传奇、清代地方戏及近、现代戏曲等四种基本形式。
+								</p>
+								<span>戏剧精神</span><br />
+								<p>
+									
+									中国戏剧既有别于古希腊的戏剧，也有别于欧美近现代的戏剧。因为，中国戏剧是在中国文化氛围之中创造出来；所以，中国人的
+
+									政治观、历史观、审美观已经给中国戏剧贴上了醒目的标签。杂剧、南戏、雅部、花部的创造，既不是空穴来风，也不是随心所欲
+	
+									。中国戏剧，是中国文化推陈出新的创造，属于中华民族以艺术的形式审视过去、解剖现实、向往未来的楮神追求。
+								</p>
+								<p>
+									时代的变迁，不断地为剧作家提供着新的题材。寻找题材并非难事，驾驭题材才是真正的难事。只有从纷杂的事件中提炼出鲜明的
+
+									时代精神的旋律，让它随情节的展开而展开，随人物性格的发展而发展，才能创造出杰出的戏剧作品。明代以《鸣凤记》、《清忠
+
+									谱》为标志的时事戏，清代借离合之情写兴亡之梦的《桃花扇》、《长生殿》诸作，以及新时代出现的《白毛女》、《洪湖赤卫队
+
+									》、《于无深处》等等，都是“一念正气”使之然，也使之具备“一念正气”。而后产生的《决战淮海》等，亦以“深沉”的格调
+
+									生色。戏剧固然需要这种题材、写法，但更需要的是这种题材这种写法所创造的“这种精神”。
+								</p>
+							</div>
+							
+							<!--戏剧的类别和相关作品欣赏-->
+							<div id="dramaAchieFu">
+								<div class="dramaAchie">
+									<div id="pic1">
+										<img src="img3/京剧.jpg"/><br />
+										<span>京剧</span><br>
+										<span>Read more...</span>
+									</div>
+									<div id="pic2">
+										<img src="img3/昆曲.jpg"/><br />
+										<span>昆曲</span><br>
+										<span>Read more...</span>
+									</div>
+									<div id="pic3">
+										<img src="img3/黄梅戏.jpg"/><br />
+										<span>黄梅戏</span><br>
+										<span>Read more...</span>
+									</div>
+									<div id="pic4">
+										<img src="img3/豫剧.jpg"/><br />
+										<span>豫剧</span><br>
+										<span>Read more...</span>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer">
+				<p class="footp">团队：小小<br>成员：林泽伟、池少辉、钟胜福、洪嘉隆</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

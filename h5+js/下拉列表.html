@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			select,#btns{
+				width: 120px;
+				height: 180px;
+				float: left;
+				margin-right:20px;
+			}
+			button{
+				width:80px;
+				height: 20px;
+				line-height: 20px;
+				margin: 12px 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="sel1" multiple="true">
+			<option value="45">椰子鸡</option>
+			<option value="100">烧烤</option>
+			<option value="35">烤鱼</option>
+			<option value="25">麻辣烫</option>
+			<option value="80">肯德基</option>
+			<option value="135">火锅</option>
+			<option value="12">粿条</option>
+			<option value="5">泡面</option>
+			<option value="13">黄焖鸡</option>
+			<option value="12">汤饭</option>
+		</select>
+		<div id="btns">
+			<button> -- > </button>
+			<button> == > </button>
+			<button> < -- </button>
+			<button> < == </button>
+		</div>
+		<select id="sel2" multiple="true">
+						
+		</select>
+	</body>
+	<script type="text/javascript">
+		var btns = document.getElementsByTagName("button");
+		btns[0].onclick = function(){
+			toOne(sel1,sel2);
+		}
+		btns[1].onclick = function(){
+			toAll(sel1,sel2);
+		}
+		btns[2].onclick = function(){
+			toOne(sel2,sel1);
+		}
+		btns[3].onclick = function(){
+			toAll(sel2,sel1);
+		}
+		function toOne(sel1,sel2){
+			var ops = sel1.children;
+			for(var i = 0;i<ops.length;i++){
+				if(ops[i].selected == true){
+					sel2.appendChild(ops[i]);
+					i--;
+				}
+			}
+		}
+		function toAll(sel1,sel2){
+			var ops = sel1.children;
+			for(var i = 0;i<ops.length;i++){
+				sel2.appendChild(ops[i]);
+				i--
+			}
+		}
+	</script>
+</html>

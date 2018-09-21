@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<style>
+	*{
+		margin:0;
+		padding:0px;
+	}
+	.searchbox{
+		width:500px;
+		margin:50px auto;
+	}
+	.searchbox input{
+		float:left;
+		border:0;
+		outline: none;
+		text-indent:10px;
+	}
+	.searchbox input[type="text"]{
+		width:398px;
+		height:30px;
+		border:1px solid #F55;
+	}
+	.searchbox input[type="button"]{
+		width:100px;
+		background-color:#F55;
+		color:#FFF;
+		height:32px;
+	}
+	.searchbox ul{
+		list-style: none;
+		width:398px;
+		border:1px solid #ddd;
+		display: none;
+	}
+	.searchbox ul li{
+		padding-left:10px;
+	}
+	.searchbox ul li.active{
+		background-color:#f55;
+		color:#FFF;
+	}
+	</style>
+</head>
+<body>
+	<div class="searchbox">
+		<input type="text" />
+		<input type="button" value="搜索" />
+		<ul id="dropbox">
+			
+		</ul>
+	</div>
+	<script>
+	$(function(){
+		//键盘弹起事件
+		$('[type="text"]').keyup(function(e){
+			if(e.keyCode==38||e.keyCode==40||e.keyCode==13) return;
+			var  keyword=$(this).val();//获取输入的值
+			$.ajax({
+				url:'https://suggest.taobao.com/sug?',
+				type:"get",
+				data:{q:keyword},
+				dataType:"jsonp",
+				success:function(responsedata){
+					 var result=responsedata.result;
+					 var dropboxel=$('#dropbox');
+					 dropboxel.empty();
+					 for(var i in result){
+					 	$('<li/>').text(result[i][0]).appendTo(dropboxel);
+					 }
+					 dropboxel.show();
+				},
+				error:function(xhr,error,exception){
+					console.log('xhr==>',xhr);
+					console.log('error===>',error);
+					console.log('exception==>',exception);
+				}
+			});
+		}).keydown(function(e){
+			var active=$('#dropbox li.active');
+			       //下键
+			if(e.keyCode==40){
+				if(active.length==0||active.next().length==0){
+					$('#dropbox li').first().addClass('active').siblings().removeClass('active');
+				}else{
+					$(active).next().addClass('active').siblings().removeClass('active');
+				}
+				$('[type="text"]').val($('li.active').text());
+			}else if(e.keyCode==38){
+				//上键
+				if(active.prev().length==0||active.length==0){
+					$('#dropbox li').last().addClass('active').siblings().removeClass('active');
+				}else{
+					$(active).prev().addClass('active').siblings().removeClass('active');
+				}
+				$('[type="text"]').val($('li.active').text());
+			}else if(e.keyCode==13){
+				location.href="https://s.taobao.com/search?q="+$('[type="text"]').val();
+			}
+		});
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2018国庆节倒计时</title>
+	</head>
+	<body>
+		<div id="box">
+			<P>国庆节倒计时：</P>
+			<span></span> : <span></span> : <span></span> : <span></span>
+		</div>
+		<script type="text/javascript">
+			var box = document.getElementById("box");
+			var sp = document.getElementsByTagName("span");
+			var nowtime = new Date();
+			var thatday = new Date(2018,9,1,0,0,0);//月份从0开始
+			var ms = (thatday - nowtime)/1000;
+			//document.write(nowtime+"<br>"+thearmyday+"<br>"+ms);
+			var timeid = setInterval(function(){
+				ms --;
+				var day = parseInt((ms/3600)/24);
+				var hour = parseInt(ms/3600%24);
+				var min = parseInt(ms%3600/60);
+    			var sec = parseInt(ms%60);
+    			day>=0&&day<=9 ? day="0"+day : day;
+    			hour>=0&&hour<=9 ? hour="0"+hour : hour;
+    			min>=0&&min<=9 ? min="0"+min : min;
+    			sec>=0&&sec<=9 ? sec="0"+sec : sec;
+    			sp[0].innerHTML = day;
+    			sp[1].innerHTML = hour;
+    			sp[2].innerHTML = min;
+    			sp[3].innerHTML = sec;
+    			if(ms==0){
+    				clearInterval(timeId);
+    			}
+			},1000);
+		</script>
+	</body>
+</html>

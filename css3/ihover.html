@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:270px;
+				height:270px;
+				/*float:left;*/
+				/*margin-right:10px;*/
+			}
+			.circular1{
+				width: 250px;
+				height:250px;
+				border:10px solid gold;
+				border-bottom: 10px solid deepskyblue;
+				border-right: 10px solid deepskyblue;
+				border-radius: 50%;	
+				transition: all 0.3s;
+			}
+			.img1 img{
+				border-radius: 50%;
+				width:250px;
+				height:250px;
+				cursor: pointer;
+			}
+			.img1{
+				position: absolute;
+				top:18px;
+				left:18px;
+			}
+			.box:hover .circular1{
+				transform:rotate(180deg);
+			}
+			hr{
+				width:180px;
+			}
+			.word h1,p{
+				display: inline-block;
+				margin:10px;
+				padding: 10px;
+			}
+			.word{
+				width:250px;
+				height:250px;
+				position: absolute;
+				top:18px;
+				left:18px;
+				text-align: center;
+				background:rgba(0,0,0,0);
+				border-radius: 50%;
+				display: none;
+			}
+			.box:hover .word{
+				background: rgba(0,0,0,0.4);
+				display: block;
+				color: #fff;
+			}
+			.circular2{
+				box-shadow: 0 0 5px 15px rgba(255,255,255,0.5) inset;
+				border-radius:50% ;
+				background-image: url(img/ihover-6.jpg);
+				background-size: cover;
+				cursor: pointer;
+				transition: all 1.0s;
+				position: absolute;
+				left:8px;
+				top:278px;
+			}
+			.circular3{
+				transition: all 1.0s;
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+				left:288px;
+				top:278px;
+			}
+			.father{
+				width:270px;
+				height: 270px;
+			}
+			.father:hover .circular2{
+				transform: rotate(60deg);
+			}
+			.father:hover .circular3{
+				transform: translate(-280px,0);
+				opacity: 1;
+			}
+			.word1{
+				width: 270px;
+				height:270px;
+				position: absolute;
+				box-shadow: 0 0 5px 15px rgba(255,255,255,0.5) inset;
+				border-radius:50% ;
+				background: rgba(0,0,0,0.3);
+				color: #fff;
+				text-align: center;
+			}
+			.word1 h1{
+				margin:40px 10px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="circular1"></div>
+			<div class="img1"><img src="img/ihover-1.jpg"/></div>
+			<div class="word">
+				<h1>HEADING HERE</h1>
+				<hr><p>gose here...</p>
+			</div>
+		</div>
+		
+		<div class="father">
+			<div class="box circular2">
+			
+			</div>
+			<div class="box circular3">
+				<div class="word1">
+					<h1>HEADING HERE</h1>
+					<hr><p>gose here...</p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

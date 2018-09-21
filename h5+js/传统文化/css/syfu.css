@@ -1,0 +1,440 @@
+body {
+	width: 100%;
+	height: auto;
+	background-image: url(../img/10439890_121001251000_2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.backu{
+	border: dashed 2px #666;
+	padding: 5px;
+	text-align: center;
+	width: 40px;
+	margin: 10px;
+	font-size: 20px;
+	color: mediumvioletred;
+	border-radius: 10px;
+}
+
+.footer{
+	width: 1200px;
+	height: 150px;
+	float: left;
+	margin: 0 auto;
+	background-image: url(../img/foot.jpg);
+	background-size: 100% 150px;
+}
+
+.footp {
+	clear: both;
+	text-align: center;
+	line-height: 40px;
+	padding-top: 40px;
+}
+
+img {
+	width: 300px;
+	height: 200px;
+	border-radius: 100px;
+	box-shadow: 5px 10px 5px #666;
+}
+
+img:hover {
+	transform: rotate(-20deg) scale(1.5);
+}
+
+.clearfix:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+
+div {
+	width: 1200px;
+	margin: auto;
+}
+
+a{
+				text-decoration: none;
+				color:#FFFFFF;
+			}
+			/*所有ul,li样式无*/
+			ul,li{
+				list-style: none;
+			}
+			/*导航里的列表项的样式*/
+			#ul1 li{
+				width: 200px;
+				height: 40px;
+				float: left;
+				text-align: center;
+				line-height: 40px;
+				color: #ffffff;
+				background:cadetblue;
+				position: relative;
+			}
+			/*导航里的列表项设置HOVER属性，设置优先级*/
+			#ul1 li:hover{
+				background:goldenrod;
+				z-index: 999;
+			}
+			/*移到导航的项时,弹出一个列表*/
+			#ul1>li:hover .list1{
+				display: block;
+			}
+			/*弹出的列表样式*/
+			.list1{
+				position: absolute;
+				left: 0;
+				top:40px;
+				display: none;
+			}
+			/*弹出的列表li样式*/
+			.list1 li{
+				width: 200px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				border-top:2px solid #a8a2a2;
+			}
+.syfu_head>ul{
+	width: 1200px;
+}
+
+.food_body {
+	margin-top: 5px;
+	background: #FFFFFF;
+	float: left;
+}
+
+h2 {
+	width: 200px;
+	margin: 10px 500px;
+	font-style: italic;
+}
+
+.floAt_img>img {
+	width: 300px;
+	height: 200px;
+	float: left;
+}
+
+.floAtl_p {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 425px;
+	color: #666;
+	margin-top: 20px;
+}
+
+.floAtr_p {
+	float: right;
+	width: 425px;
+	color: #666;
+	margin-top: 20px;
+}
+
+.floAtl_p>p,
+.floAtr_p>p,
+.teXt {
+	text-indent: 30px;
+	line-height: 25px;
+}
+
+.floAtl_p>p:first-letter,
+.floAtr_p>p:first-letter,
+.teXt:first-letter {
+	font-style: italic;
+}
+
+.cul_exp {
+	margin-top: 20px;
+	float: left;
+	width: 1120px;
+}
+
+.tiTle:first-letter {
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.tiTle {
+	line-height: 25px;
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: bolder;
+	-webkit-text-stroke: 1px;
+	-webkit-text-stroke-color: #ccc;
+	-webkit-text-stroke-width: 2px;
+}
+
+.cul_textl {
+	margin-left: 40px;
+	width: 1120px;
+	float: left;
+}
+
+.teXt {
+	width: 100%;
+	color: #666;
+	text-spacing: 5px;
+}
+
+.teXt>img {
+	width: 300px;
+	height: 200px;
+	border-radius: 100px;
+}
+
+.cul_textl>.fir_te,
+.left_teXt>.fir_te {
+	font-size: 20px;
+	font-style: italic;
+	-webkit-text-stroke: 1px;
+	-webkit-text-stroke-color: #8B0000;
+	-webkit-text-stroke-width: 2px;
+}
+
+.left_teXt {
+	width: 45%;
+	height: auto;
+	float: left;
+	color: #666;
+	margin-left: 20px;
+	text-spacing: 5px;
+}
+
+.center_teXt {
+	width: 100%;
+	height: 300px;
+	float: left;
+	margin: 50px 20px 0;
+}
+
+.left_teXt>img {
+	width: 300px;
+	height: 200px;
+	border: dotted 2px #666666;
+	border-radius: 100px;
+	margin-left: 20%;
+}
+
+.cul_exp2 {
+	float: left;
+	height: 1600px;
+}
+
+.cul_exp2>.cul_textl {
+	width: 1100px;
+}
+
+.culxp_img {
+	width: 1100px;
+	margin: 50px auto;
+}
+
+.culxp_img>img {
+	width: 300px;
+	height: 200px;
+	float: left;
+	margin: 0 30px;
+}
+
+.poSition {
+	position: relative;
+}
+
+.hisTory {
+	width: 350px;
+	height: auto;
+	position: absolute;
+}
+
+.poSition>.hisTory:nth-child(2) {
+	left: 375px;
+}
+
+.hisTory:nth-child(3) {
+	left: 750px;
+}
+
+.hisTory:nth-child(4) {
+	top: 500px;
+}
+
+.hisTory:nth-child(5) {
+	top: 420px;
+	left: 375px;
+}
+
+.hisTory:nth-child(6) {
+	top: 560px;
+	left: 750px;
+}
+
+.hisTory:nth-child(7) {
+	top: 960px;
+}
+
+.hisTory:nth-child(8) {
+	top: 1040px;
+	left: 375px;
+}
+
+.hisTory:nth-child(9) {
+	top: 1240px;
+	left: 750px;
+}
+
+.hisTory>img {
+	width: 300px;
+	height: 200px;
+}
+
+
+/*artist.html*/
+
+.text1_se {
+	height: auto;
+	float: left;
+}
+
+.runImg {
+	width: 600px;
+	height: 400px;
+	margin: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.runImg>ul>li {
+	float: left;
+	border: none;
+}
+
+.runImg>ul {
+	width: 600px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.runImg img {
+	width: 600px;
+	height: 400px;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.runImg img:hover {
+	transform: rotate(0deg);
+}
+
+.arr {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 40%;
+}
+
+.left,
+.right {
+	width: 50px;
+	height: 100px;
+	background: rgba(0, 0, 0, .5);
+	font-family: '黑体';
+	color: white;
+	text-align: center;
+	line-height: 100px;
+	cursor: pointer;
+	font-size: 60px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.runImg_ol {
+	margin: 0 20px;
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+}
+
+.runImg_ol li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background: white;
+	margin-right: 8px;
+}
+
+.rig_run {
+	width: 550px;
+	height: 390px;
+	float: right;
+	margin-top: -400px;
+	overflow: hidden;
+}
+
+.rig_run>ul {
+	padding: 0;
+	width: 100%;
+}
+
+.rig_run>ul>li {
+	width: 180px;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bolder;
+	border-left: none;
+	border-right: dotted 1px #666666;
+}
+
+.rig_run>ul>li:last-child {
+	border-right: none;
+}
+
+.rig_run>ol>li {
+	width: 100%;
+	height: 350px;
+	margin-top: 40px;
+	text-indent: 20px;
+	font-size: 18px;
+	border-left: dotted 2px lightblue;
+	border-right: dotted 2px lightgreen;
+}
+
+.rigrun_ol>li:nth-child(2)>img,
+.rigrun_ol>li:nth-child(3)>img {
+	margin-left: 130px;
+}
+
+.badaimg {
+	width: 500px;
+	height: 300px;
+}
+
+.badaimg:hover {
+	transform: rotate(-20deg) scale(1.2);
+}
+
+.rigrun_ol>li>img:hover {
+	transform: scaleX(1.2);
+}

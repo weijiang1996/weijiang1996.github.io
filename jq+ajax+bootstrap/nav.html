@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<style type="text/css">
+		html,body{height:100%;}
+		.main{padding-top:50px;}
+		.main .navbar{border-right:0px;margin:0px -15px;}
+		.nav > li > a:hover, .nav > li > a:focus{background-color:#111;}
+		.main,.main>.row,.main .leftbar{height:100%;}
+		.main .leftbar{overflow-y:auto;}
+		.mar{margin-bottom:0px;}
+		::-webkit-scrollbar{
+			width:16px;
+			height:1px;
+		}
+		/* 设置滚动条条的样式*/
+		::-webkit-scrollbar-thumb{
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.5);
+			background: #535353;
+		}
+		::-webkit-scrollbar-track{
+			-webkit-box-shadow: inset 0 0 5px rgba(100,100,100,0.2);
+			border-radius: 10px;
+			background: #F8EFC0;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topMenu">
+						<i class="icon-bar"></i>
+						<i class="icon-bar"></i>
+						<i class="icon-bar"></i>
+					</button>
+					<a href="#" class="navbar-brand">管理后台</a>
+				</div>
+				<div class="collapse navbar-collapse" id="topMenu">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" >用户管理</a></li>
+						<li><a href="#">内容管理</a></li>
+						<li><a href="#">客户管理</a></li>
+						<li><a href="#">栏目管理</a></li>
+						<li><a href="#">产品管理</a></li>
+						<li><a href="#">订单管理</a></li>
+						<li><a href="#">微信公众号</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a href="#" data-toggle="dropdown">用户管理<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="">个人信息</a></li>
+								<li><a href="">修改密码</a></li>
+								<li><a href="">上传头像</a></li>
+								<li><a href="">站内信息<span class="badge label label-success">23</span></a></li>
+								<li class="divider"></li>
+								<li><a href="">退出登录</a></li>
+							</ul>
+						</li>
+					</ul>
+					<p class="navbar-text navbar-right">欢迎<a href="#" class="navbar-link">xx</a>登录</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid main">
+			<div class="row">
+				<div class="col-md-2 navbar-inverse leftbar">
+					<ul class="nav navbar">
+						<li>
+							<a href="#manageuser" data-toggle="collapse" class="form-group mar">
+								<div class="input-group ">
+									<span class="col-sm-1">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<div class="col-sm-9">
+										用户管理
+									</div>
+								</div>
+							</a>
+							<div class="list-group collapse mar" id="manageuser">
+								<a href="#adduser" class="list-group-item" data-toggle="tab">添加用户</a>
+								<a href="#listuser" class="list-group-item" data-toggle="tab">用户列表</a>
+								<a href="#deluser" class="list-group-item" data-toggle="tab">删除用户</a>
+							</div>
+						</li>
+						<li>
+							<a href="#managecontent" data-toggle="collapse" class="form-group mar"> 
+								<div class="input-group">
+									<span class="col-sm-1">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<div class="col-sm-9">
+										内容管理
+									</div>
+								</div>
+							</a>
+							<div class="list-group collapse mar" id="managecontent">
+								<a href="#" class="list-group-item">内容1</a>
+								<a href="#" class="list-group-item">内容2</a>
+								<a href="#" class="list-group-item">内容3</a>
+								<a href="#" class="list-group-item">内容4</a>
+							</div>
+						</li>
+						<li>
+							<a href="#managecustomer" data-toggle="collapse" class="form-group mar">
+								<div class="input-group mar">
+									<span class="col-sm-1">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<div class="col-sm-9">
+										用户管理
+									</div>
+								</div>
+							</a>
+							<div class="list-group collapse mar" id="managecustomer">
+								<a href="#" class="list-group-item">添加客户</a>
+								<a href="#" class="list-group-item">客户列表</a>
+								<a href="#" class="list-group-item">删除客户</a>
+							</div>
+						</li>
+						<li>
+							<a href="#managegood" data-toggle="collapse" class="form-group mar">
+								<div class="input-group mar">
+									<span class="col-sm-1">
+										<i class="glyphicon glyphicon-user"></i>
+									</span>
+									<div class="col-sm-9">
+										产品管理
+									</div>
+								</div>
+							</a>
+							<div class="list-group collapse mar" id="managegood">
+								<a href="#" class="list-group-item">添加产品</a>
+								<a href="#" class="list-group-item">产品列表</a>
+								<a href="#" class="list-group-item">删除产品</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-9 tab-content">
+					<div class="container tab-pane" id="listuser">
+						<div class="panel panel-warning">
+							<div class="panel-heading">
+								<h4>用户列表</h4>
+							</div>
+							<div class="panel-body">
+								<form class="form-inline">
+									<div class="input-group">
+										<input type="text" class="form-control" />
+										<span class="input-group-addon btn">搜索</span>
+									</div>
+								</form>
+								<table class="table table-bordered table-hover" style="margin-top:10px">
+									<thead>
+										<tr>
+											<th>编号</th>
+											<th>名字</th>
+											<th>性别</th>
+											<th>年龄</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="panel-footer">
+								<ul class="pagination">
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">7</a></li>
+									<li><a href="#">8</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<ul class="breadcrumb">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">用户管理</a></li>
+				<li><a href="#">内容管理</a></li>
+				<li><a href="#">客户管理</a></li>
+				<li><a href="#">栏目管理</a></li>
+				<li><a href="#">产品管理</a></li>
+				<li><a href="#">账单管理</a></li>
+				<li><a href="#">微信公众号</a></li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+	</body>
+</html>

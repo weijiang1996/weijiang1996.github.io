@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin:150px;
+			}
+			.box{
+				width: 100px;
+				height:100px;
+				margin:100px;
+				perspective: 500;
+				-webkit-perspective: 500;
+			}
+			.cube{
+				width: 100px;
+				height:100px;
+				background: #ccc;
+				/*text-align: center;*/
+				/*line-height: 200px;*/
+				position: relative;
+				transform-style: preserve-3d;
+            	transform: rotateX(-15deg) rotateY(0deg);
+            	animation: cube 5s infinite;
+			}
+			@keyframes cube{
+				0%{
+					transform: rotateX(0deg) rotateY(0deg);
+				}
+				50%{
+					transform: rotateX(360deg) rotateY(0deg);
+				}
+				100%{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+			}
+			.cube div[class^=tran]{
+				width:100px;
+				height:100px;
+				display: inline-block;
+				position: absolute;
+				/*top:50px;
+				left:50px;*/
+				font-size: 30px;
+			}
+			.ball div[class^=tran]{
+				border-radius: 50%;
+			}
+			.tranA{
+				background: #f00;
+				transform-origin: 50% 0 0;
+				transform: rotateX(90deg) translateZ(30px) translateY(-50px);
+			}
+			.tranB{
+				background: #00f;
+				transform-origin: 0 50% 0;
+				transform: rotateY(-90deg) translateZ(30px) translateX(-50px);
+			}
+			.tranC{
+				background: #0f0;
+				transform: translateZ(80px);
+			}
+			
+			.tranD{
+				background: #ff0;
+				transform: rotateY(180deg) translateZ(80px);
+			}
+			.tranE{
+				background: #f0f;
+				transform-origin: 100% 50% 0;
+				transform: rotateY(90deg) translateZ(30px) translateX(50px);
+			}
+			.tranF{
+				background: #0ff;
+				transform-origin: 50% 100% 0;
+				transform: rotateX(-90deg) translateZ(30px) translateY(50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="cube">
+				<div class="tranA"></div>
+				<div class="tranB"></div>
+				<div class="tranC"></div>
+				<div class="tranD"></div>
+				<div class="tranE"></div>
+				<div class="tranF"></div>
+			</div>
+		</div>
+		
+		<div class="box">
+			<div class="cube ball">
+				<div class="tranA"></div>
+				<div class="tranB"></div>
+				<div class="tranC"></div>
+				<div class="tranD"></div>
+				<div class="tranE"></div>
+				<div class="tranF"></div>
+			</div>
+		</div>
+	</body>
+</html>

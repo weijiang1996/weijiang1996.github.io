@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p id = "p1">全选水果 <input type="checkbox" name="fruit" id="fruit" value="" /></p>
+		<p id = "p2">反选水果 <input type="checkbox" name="inverse" id="inverse" value="" /></p>
+		<p id = "p3">取消水果 <input type="checkbox" name="cancel" id="cancel" value="" /></p>
+		
+		<p id = "p4">
+			榴莲 <input type="checkbox" name="" id="" value="" /><br>
+			山竹 <input type="checkbox" name="" id="" value="" /><br>
+			葡萄 <input type="checkbox" name="" id="" value="" /><br>
+			西瓜 <input type="checkbox" name="" id="" value="" /><br>
+			李子 <input type="checkbox" name="" id="" value="" /><br>
+		</p>
+	</body>
+	<script type="text/javascript">
+		var all_ip = document.getElementById("fruit"); //全选框
+		var inverse_ip = document.getElementsByName("inverse")[0]; //反选框
+		var ips = document.getElementsByTagName("p");
+		var cansel_ip = ips[2].getElementsByTagName("input")[0]; //取消框
+		var each = document.getElementById("p4");
+		var each_ips = each.getElementsByTagName("input");//子项框
+		//全选，全不选
+		all_ip.onclick = function(){
+			for(var i =0;i<each_ips.length;i++){
+				each_ips[i].checked = all_ip.checked;
+			}
+		}
+		//反选
+		inverse_ip.onclick = function(){
+			for(var i =0;i<each_ips.length;i++){
+				if(each_ips[i].checked == true){
+					each_ips[i].checked = false;
+				}else{
+					each_ips[i].checked = true;
+				}
+			}
+		}
+		//取消
+		cansel_ip.onclick = function(){
+			for(var i =0;i<each_ips.length;i++){
+				each_ips[i].checked = false;
+			}
+			cansel_ip.checked = false;
+		}
+	</script>
+</html>

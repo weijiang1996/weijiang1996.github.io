@@ -1,0 +1,102 @@
+		/*主体第一部分的样式设置*/
+			#main1{
+				width:1200px;
+				height:300px;
+				margin: 0 auto;
+				background:#e9e5d9;
+			}
+			#img1{
+				float: left;
+				width:400px;
+				height: 300px;
+			}
+			#text1{
+				float: right;
+				width: 800px;
+				height: 300px;
+			}
+			h2{
+				text-align: center;
+				line-height: 40px;
+				color: gold;
+			}
+			.p1{
+				padding: 10px;
+				font-size: 15px;
+				text-indent: 30px;
+				color: #333333;
+			}
+			/*主体第二部分的样式设置*/
+			#main2{
+				width: 1200px;
+				height:690px;
+				margin: 0 auto;
+			}
+			
+			#list1{
+				width: 200px;
+				height: 240px;
+				float: left;	
+			}
+			/*左侧列表*/
+			#ul2{
+				width:200px;
+				height:240px;
+				background-image: url(../img2/bgkongfu.jpg);
+				background-size:100% 240px ;
+			}
+			/*li样式*/
+			#ul2 li{
+				width:150px;
+				height: 40px;
+				font-size: 25px;
+				text-align: center;
+				line-height: 40px;
+				border-radius: 20px;
+				margin:0 auto;
+				margin-bottom:25px;
+				background: dodgerblue;
+			}
+			/*右侧文本样式*/
+			.text3{
+				width:960px;
+				height: 200px;
+				background: pink;
+				float: right;
+				padding: 20px;
+				display: none;
+				background-image: url(../img2/bgkongfu.jpg);
+				background-size:100% 240px ;
+			}
+			.p4{
+				text-indent: 32px;
+				font-size:16px;
+			}
+			
+			/*主体第三部分的样式设置，采用多列布局，分三列，内容自适应，分隔线，行列间间隔*/
+			#duolie{
+				width:1090px;
+				height: 340px;
+				background-image: url(../img2/bgkongfu.jpg);
+				background-size:100% 340px ;
+				border: 5px dashed goldenrod;
+				border-radius:50px;
+				-webkit-columns: auto 3;
+				-webkit-column-gap: 30px;
+				-webkit-column-rule: 2px dotted goldenrod;
+				line-height: 25px;
+				padding:50px;
+			}
+			/*多列布局内容样式*/
+			#duoliep{
+				background-color: goldenrod;
+				border-radius:20px;
+				width:200px;
+				font-size:30px;
+				margin:0 auto;
+				margin-bottom:30px;
+				-webkit-column-width: 200px;
+				-webkit-column-span:all;
+				text-align: center;
+			}
+			

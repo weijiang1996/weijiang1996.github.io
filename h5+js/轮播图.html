@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+           }
+        #box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 10px dotted green;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            width: 500%;
+            height: 200px;
+            position: absolute;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height:200px;
+            float: left;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        #arr{
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+
+        }
+        #left , #right{
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,.5);
+            font-family: '黑体';
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #left{
+            float: left;
+            margin-left: 10px;
+        }
+        #right{
+            float: right;
+            margin-right: 10px;
+        }
+        ol{
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+        }
+        ol li {
+            list-style: none;
+            display: inline-block;
+            /*padding: 5px;*/
+            width: 20px;
+            height:20px;
+            /*color: white;*/
+            background: white;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+        <li><img src="img/1.jpg" alt=""></li>
+    </ul>
+    <div id="arr">
+        <div id="left"> < </div>
+        <div id="right"> > </div>
+    </div>
+    <ol>
+        <li style='background: red'>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+</div>
+<script src='js/moveTo.js'></script>
+<script>
+    var ol = document.getElementsByTagName('ol')[0]
+    var olLis = ol.children
+    var ul = document.getElementsByTagName('ul')[0]
+    var ulLis = ul.children
+
+    var right = document.getElementById('right')
+    var left = document.getElementById('left')
+    var box = document.getElementById('box')
+	//    自动播放
+    var timeId = setInterval(function () {
+//       数字标志计数 到最后一个就重置为0
+        number++
+        if(number == 4){
+            number = 0
+        }
+//       控制当前数字标志只显示一个红色
+        for(var j = 0;j<olLis.length;j++){
+            olLis[j].style.background = 'white'
+        }
+        olLis[number].style.background = 'red'
+	    if(index == 4){
+            ul.style.left = '0px'
+            index = 0
+        }
+        index++
+
+        var target = -index*200
+        console.log(target)
+        moveTo(ul,target)
+    },1000)
+    box.onmouseover = function () {
+        clearInterval(timeId)
+    }
+    box.onmouseout = function () {
+        clearInterval(timeId)
+        timeId = setInterval(function () {
+//       数字标志计数 到最后一个就重置为0
+            number++
+            if(number == 4){
+                number = 0
+            }
+//       控制当前数字标志只显示一个红色
+            for(var j = 0;j<olLis.length;j++){
+                olLis[j].style.background = 'white'
+            }
+            olLis[number].style.background = 'red'
+            if(index == 4){
+                ul.style.left = '0px'
+                index = 0
+            }
+            index++
+
+            var target = -index*200
+            console.log(target)
+            moveTo(ul,target)
+        },1000)
+    }
+    //  鼠标移入让当前元素变红 其他元素变白 图片移动到们对应位置
+    for(var i = 0;i<olLis.length;i++){
+        olLis[i].index = i
+        olLis[i].onmouseover = function () {
+            for(var j = 0;j<olLis.length;j++){
+                olLis[j].style.background = 'white'
+            }
+            this.style.background = 'red'
+            var count = this.index
+//      设置目标位置
+            var target = -count*200
+//      调用函数到达目标位置
+            moveTo(ul,target)
+			index = number = this.index
+        }
+    }
+//    定义变量
+    var index = 0  //用来控制图片li的切换
+    var number = 0  //控制数字标志的样式
+    right.onclick = function () {
+        number++
+        if(number == 4){
+            number = 0
+        }
+        for(var j = 0;j<olLis.length;j++){
+            olLis[j].style.background = 'white'
+        }
+        olLis[number].style.background = 'red'
+
+        if(index == 4){
+            ul.style.left = '0px'
+            index = 0
+        }
+        index++
+
+        var target = -index*200
+        console.log(target)
+        moveTo(ul,target)
+//		        // 每次只开一个定时器
+//		    clearInterval(obj.timeId)
+//		    obj.timeId = setInterval(function () {
+//		//            设置每次变化的值
+//		        var step = 20;
+//		//            获得当期位置
+//		        var now = obj.offsetLeft
+//		//            如果目标位置大于当前位置 变化值取相反数
+//		        if(target<now){
+//		            step = -step
+//		        }
+//		//            如果目标位置距离当前位置小于一个变化值的长度
+//		        if(Math.abs(target-now)<Math.abs(step)){
+//		//                清除定时器 设置位置为目标值
+//		            clearInterval(obj.timeId)
+//		            obj.style.left = target + 'px'
+//		        }else {
+//		//                将目前位置加上变化值 设置给元素
+//		            now += step
+//		            obj.style.left = now + 'px'
+//		        }
+//		    },10)
+    }
+	left.onclick = function(){
+		number--
+		if(number<0){
+			number = olLis.length-1
+		}
+		for(var j = 0;j<olLis.length;j++){
+            olLis[j].style.background = 'white'
+        }
+        olLis[number].style.background = 'red'
+        if(number == 0 ){
+        	ul.style.left = -200*(ulLis.length-1) + 'px'
+            index = ulLis.length-1
+        }
+		index--
+		var target = -index*200
+        console.log(target)
+        moveTo(ul,target)
+	}
+</script>
+</body>
+</html>

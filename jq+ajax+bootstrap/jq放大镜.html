@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+	            padding: 0;
+	            margin: 0;
+	        }
+	        #small{
+	            width: 350px;
+	            height: 350px;
+	            border: 1px solid #000;
+	            float: left;
+	            position: relative;
+	        }
+	        #small div{
+	            width: 100px;
+	            height: 100px;
+	            background-color: rgba(255, 255, 0, 0.3);
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            display: none;
+	            cursor: move;
+	        }
+	        #big{
+	            width: 350px;
+	            height: 350px;
+	            border: 1px solid #000;
+	            float: left;
+	            display: none;
+	            overflow: hidden;
+	            position: relative;
+	        }
+	        #big img{
+	            display: block;
+	            position: absolute;
+	        }
+		</style>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<div id="fdj">
+		    <div id="small">
+		        <img src="img/small.jpg">
+		        <div id="pop"></div>
+		    </div>
+		    <div id="big">
+		        <img src="img/big.jpg" width="1225" height="1225">
+		    </div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#small').on('mouseover',function(){
+				$('#pop').css('display','block');
+				$("#big").css('display','block');
+			});
+			$(document).on('mouseover',function(e){
+				var popX = $('#small').offset().left
+				var popY = $('#small').offset().top
+				var x = e.clientX-popX- 50
+				var y = e.clientY-popY- 50
+				if(x<0){
+					x=0;
+				}else if(x>$('#small').width()-$('#pop').width()){
+					x = $('#small').width()-$('#pop').width()
+				}
+				if(y<0){
+					y=0;	
+				}else if(y > $('#small').height()-$('#pop').height()){
+					y = $('#small').height()-$('#pop').height()
+				}
+				$('#pop').css('left',x)
+				$('#pop').css('top',y)
+			    $('#big img').css('left',-3.5*x)
+			    $('#big img').css('top',-3.5*y)
+			});
+			$('#small').on('mouseout',function(){
+		    	$('#pop').css('display','none');
+				$("#big").css('display','none');
+		        $(document).remove();
+		  	});
+		});
+
+	</script>
+</html>

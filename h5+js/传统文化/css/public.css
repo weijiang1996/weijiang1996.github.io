@@ -1,0 +1,82 @@
+			*{
+				margin:0;
+				padding: 0;
+			}
+			/*表头*/
+			#header{			
+				width: 100%;
+			}
+			#nav{
+				margin: 0 auto;
+				width: 100%;
+				height: 40px;
+				//position: fixed;
+				//top: 0;
+			}
+			#navzi{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			/*列表里LIa标签样式*/
+			a{
+				text-decoration: none;
+				color:#FFFFFF;
+			}
+			/*所有ul,li样式无*/
+			ul,li{
+				list-style: none;
+			}
+			/*导航里的列表项的样式*/
+			#ul1 li{
+				width: 200px;
+				height: 40px;
+				float: left;
+				text-align: center;
+				line-height: 40px;
+				color: #ffffff;
+				background:cadetblue;
+				position: relative;
+				
+			}
+			/*导航里的列表项设置HOVER属性，设置优先级*/
+			#ul1 li:hover{
+				background:goldenrod;
+				z-index: 999;
+			}
+			/*移到导航的项时,弹出一个列表*/
+			#ul1>li:hover .list1{
+				display: block;
+			}
+			/*弹出的列表样式*/
+			.list1{
+				position: absolute;
+				left: 0;
+				top:40px;
+				display: none;
+			}
+			/*弹出的列表li样式*/
+			.list1 li{
+				width: 200px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				border-top:2px solid #a8a2a2;
+			}
+			/*表脚样式设计*/
+			#footfu{
+				width: 100%;
+			}
+			#footer{
+				clear: both;
+				width: 1200px;
+				height: 150px;
+				background-image: url(../img/foot.jpg);
+				background-size: 100% 150px;
+				margin: 0 auto;
+			}
+			.footp{
+				clear: both;
+				text-align: center;
+				line-height: 40px;
+				padding-top: 40px;
+			}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/contact.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/art.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			<!--导航栏部分-->
+			<div id="nav">
+				<div id="navzi">
+					<ul id="ul1">
+				<a href="index.html"><li>首页</li></a>
+				<a href="custom.html"><li>传统民俗
+					<ul class="list1">
+						<a href='custom.html'><li>民间工艺</li></a>
+						<a href='festival.html'><li>节日习俗</li></a>
+						<a href='kongfu.html'><li>中华武术</li></a>
+					</ul>
+				</li></a>
+				<a href='art-drama.html'><li>传统艺术
+					<ul class="list1">
+						<a href='art-drama.html'><li>戏曲</li></a>
+						<a href='art-calligraphy.html'><li>书法</li></a>
+						<a href='art-painting.html'><li>国画</li></a>
+					</ul>
+				</li></a>
+				<a href='儒家.html'><li>诸子百家
+					<ul class="list1">
+						<a href='儒家.html'><li>儒家学派</li></a>
+						<a href='道家.html'><li>道家学派</li></a>
+						<a href='墨家.html'><li>墨家学派</li></a>
+					</ul>
+				</li></a>
+				<a href='artist.html'><li>饮食文化
+					<ul class="list1">
+						<a href='artist.html'><li>饮食艺术</li></a>
+						<a href="food.html"><li>饮食文化发展史</li></a>
+						<a href='Food_drink.html'><li>八大菜系</li></a>
+					</ul>
+				</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+				</ul>
+				</div>
+			</div>
+			
+			<!--主体部分-->
+			<div id="main">
+				<!--主体部分头部-->
+				<div id="main-headfu">
+					<div id="main-head">
+						<img src="img3/d2a1d365e6ad265cc7327b8354f92392.jpg"/>
+					</div>
+					<div id="text">
+						contact with us
+					</div>
+				</div>
+				<!--主题内容-->
+				<div id="main-body">
+					<div id="contfu">
+						<div id="conleft">
+							<div id="contop">
+								<span>contact us</span>
+								<span>联系我们</span>
+							</div>
+							<div id="conmiddle">
+								<span>如遇到任何问题，请联系我们。</span>
+							</div>
+							<div id="conbottom">
+								<img src="img3/location.png"/><span>广东从化经济开发区高技术产业广从南路548号广州大学华软软件学院</span>
+								<span><img src="img3/email.png"/>100000000@qq.com</span>
+								<span><img src="img3/phone.png"/>(020)-8888888</span>
+							</div>
+						</div>
+						
+						<!--
+							用户填以及提交的表单部分
+							界面效果：
+									用户不输入无法进行提交，为弹窗提醒
+									表单由5部分组成（姓名、邮箱、号码、意见信息以及提交按钮），每部分
+									都有相应的校验规则，检测合不合法，没按规则填空，弹窗会弹出对应方面的错误
+							实现方法：
+									通过js对表单进行监听校验
+									校验的规则通过正则表达式来匹配
+									用户输入的错误提醒信息会赋值到字符串中
+									提交按钮注册点击事件，校验表单，并弹出错误提醒信息
+						-->
+						<div id="conmain">
+							<span>Send us a message</span>
+							<form id="form" action="http://www.baidu.com" target="_blank" onsubmit="return check()" method="post" >
+								<input type="text" name="name" id="name" value="" placeholder=" 你的姓名"/>
+								<input type="text" name="email" id="email" value="" placeholder=" 你的邮箱"/>
+								<input type="text" name="phone" id="phone" value="" placeholder=" 你的号码"/>
+								<textarea name="message" id="message" placeholder=" 信息"></textarea>
+								<input type="submit" id="sub" class="sub" value="发送"/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer">
+				<p class="footp">团队：小小<br>成员：林泽伟、池少辉、钟胜福、洪嘉隆</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			#box{
+				width:700px;
+				margin:100px auto;
+				background:greenyellow;
+				position: relative;
+			}
+			ul{
+				list-style: none;
+			}
+			#up{
+				text-align: center;
+			}
+			#down li{
+				float:left;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				/*background: deepskyblue;*/
+			}
+			#weeks li{
+				background: deepskyblue;
+			}
+			#down li:hover{
+				background: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div id="up">
+				<select id="year"></select> 年
+				<select id="month"></select> 月
+			</div>
+			<div id="down">
+				<ul id="weeks">
+					<li>周日</li>
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+				</ul>
+				<ul id="days"></ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var yearSelect = document.getElementById("year");
+		var monthSelect = document.getElementById("month");
+		var daysUl = document.getElementById("days");
+		//填充选项年份
+		for(var year=1900;year<=3000;year++){
+			createOption(year,yearSelect);
+		}
+		//填充选项月份
+		for(var month=1;month<=12;month++){
+			createOption(month,monthSelect);
+		}
+		//设置显示当前年月
+		setNowYearAndMonth();
+		fillDays(+yearSelect.value,monthSelect.value-1);//显示值加了一，参与实际计算要减一
+		yearSelect.onchange = function(){
+			fillDays(+yearSelect.value,monthSelect.value-1);
+		}
+		monthSelect.onchange = function(){
+			fillDays(+yearSelect.value,monthSelect.value-1);
+		}
+		//function=================================================================================
+		//创建option,并添加到对应的父select中
+		function createOption(value,parentSelect){
+			var opt = document.createElement("option");
+			opt.innerHTML = value;
+			opt.value = value;
+			parentSelect.appendChild(opt);
+		}
+		//获得当前年月，设为默认年月
+		function setNowYearAndMonth(){
+			var date = new Date();
+			yearSelect.value = date.getFullYear();
+			monthSelect.value = date.getMonth()+1;
+		}
+		//填充相应的日期
+		function fillDays(year,month){
+			//清空
+			daysUl.innerHTML = '';
+			//代表指定的某年月的1日
+			var date = new Date(year,month,1);
+			//计算1日是星期几
+			var dayOfWeek = date.getDay();
+			//向1日之前添加内容是空的li
+			for(var i =0;i<dayOfWeek;i++){
+				createLi('',daysUl);
+			}
+			//计算当前月有多少天,求下一个月第一天
+			var nextOne = new Date(year,month+1,1);
+			//推出上个月最后一天
+			nextOne.setDate(0);
+			var currentDays = nextOne.getDate();//获取到这个月有多少天
+			for(var i =1;i<=currentDays;i++){
+				createLi(i,daysUl);
+			}
+			//当前日期背景
+			var today = new Date().getDate();
+			var li = document.getElementById(today);
+			li.style.background = "red";
+			li.style.borderRadius = "50%";
+		}
+		//创建日期项
+		function createLi(value,parentUl){
+			var li = document.createElement("li");
+			li.innerHTML = value;
+			if((value+'').length>0){
+				li.id = value;	
+			}
+			parentUl.appendChild(li);
+		}
+		
+		
+	</script>
+</html>

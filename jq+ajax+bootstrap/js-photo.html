@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			button{
+				position: fixed;
+				width:80px;
+				height:40px;
+				line-height: 40px;
+				background: deepskyblue;
+				border-radius: 50px;
+				outline: none;
+				border:none;
+				text-align: center;
+				cursor: pointer;
+			}
+			img{
+				width:200px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="getdata()">get photo</button>
+  		<div id="box"></div>
+  		<img src="" alt="">
+  		
+  		<script type="text/javascript">
+  			var xmlhttp;
+  			if(window.XMLHttpRequest){
+  				xmlhttp = new XMLHttpRequest();
+  			} else {
+  				xmlhttp = new ActiveXObject();
+  			} 
+  			var APIurl = 'https://www.apiopen.top/meituApi?page=';
+    		var page = 1;
+    		var json;
+		    function getdata() {
+		    	var currentUrl = APIurl + page;
+		   		xmlhttp.open('get', currentUrl);
+		    	xmlhttp.send();
+		    	page++;
+		    }
+		    xmlhttp.onreadystatechange = function(){
+		    	// console.log(xmlhttp.response)
+		        // console.log(xmlhttp.responseText.data)
+		        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+		        json = JSON.parse(xmlhttp.responseText);
+		        // console.log(json.data[0].url)
+		        // var x = '';
+		
+		        	for (var i = 0; i < json.data.length; i++) {
+		          	// console.log(json.data[i].url)
+//		            var imgNOde = new Image();
+		            var imgNode = document.createElement('img');
+		            imgNode.src = json.data[i].url;
+		            // console.log(imgNode)
+		            document.body.appendChild(imgNode);
+		
+		           // x += '<img src="' + json.data[i].url + '">'
+		            // document.getElementById('box').innerHTML = x;
+		        	}
+      			}
+			}
+  		</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.one{
+				width:300px;
+				height:200px;
+			}
+			.one img{
+				width: 300px;
+				height:200px;
+			}
+			.stage{
+				width:600px;
+				height:400px;
+				position: relative;
+				display: none;
+			}
+			.left-top{
+				width: 300px;
+				height:200px;
+				position: absolute;
+				/*background: #ff0;*/
+				background: url(img/人生赢家.jpg) no-repeat top left;
+				background-size:600px 400px;
+				/*animation: scale 1s;*/
+			}
+			.right-top{
+				width: 300px;
+				height:200px;
+				position: absolute;
+				left:300px;
+				/*background: #0ff;*/
+				background: url(img/人生赢家.jpg) no-repeat top right;
+				background-size:600px 400px;
+				/*animation: scale 0.5s;*/
+			}
+			.left-bottom{
+				width: 300px;
+				height:200px;
+				position: absolute;
+				top:200px;
+				/*background: #f0f;*/
+				background: url(img/人生赢家.jpg) no-repeat bottom left;
+				background-size:600px 400px;
+				/*animation: scale 0.5s;*/
+			}
+			.right-bottom{
+				width: 300px;
+				height:200px;
+				position: absolute;
+				left:300px;
+				top:200px;
+				/*background: #00f;*/
+				background: url(img/人生赢家.jpg) no-repeat right bottom;
+				background-size:600px 400px;
+				/*animation: scale 0.5s;*/
+			}
+			@keyframes scale{
+				from{
+					transform: scale(0.97,0.97);
+				}
+				to{
+					transform: scale(1,1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one">
+			<img src="img/人生赢家.jpg"/>
+		</div>
+		<div class="stage">
+			<div class="left-top"></div>
+			<div class="right-top"></div>
+			<div class="left-bottom"></div>
+			<div class="right-bottom"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var one = document.getElementsByClassName("one")[0];
+		var stage = document.getElementsByClassName("stage")[0];
+		one.onmousemove = function(){
+			stage.style.display = "block";
+			for(var i =0;i<stage.children.length;i++){
+				stage.children[i].style.animation = "scale 0.5s";
+				stage.children[i].style.transition="all 0.2 ease-out"
+//				console.log(stage.children[i]);
+			}
+		}
+		one.onmouseout = function(){
+			stage.style.display = "none"
+		}
+	</script>
+</html>

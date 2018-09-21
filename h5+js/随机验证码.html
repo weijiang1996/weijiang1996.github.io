@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				color:deepskyblue;
+			}
+			#text{
+				width:150px;
+				height:40px;
+				line-height: 40px;
+				background: lightgray;
+				color:black;
+				text-align: center;
+				color:darkgreen;
+			}
+		</style>
+	</head>
+	<body onload="randomnumGet()">
+		<p id="text"></p>
+		<span><a href="#">看不清，换一张</a></span>
+	</body>
+	<script type="text/javascript">
+		var p = document.getElementById("text");
+		var a = document.getElementsByTagName("a")[0];
+		var arr1 =new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',   
+            'S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m',
+			'n','o','p','q','r','s','t','u','v','w','x','y','z');
+		var arr2 = new Array();
+		var	randomnum = 0;
+		a.onclick = function(){
+			 randomnumGet();
+		}
+		function randomnumGet(){
+			for(var i=0;i<6;i++){
+				randomnum = parseInt(Math.random()*62);
+				arr2[i]= arr1[randomnum];
+			}
+			var str = arr2.join('');
+			p.innerHTML = str;
+		}	
+	</script>
+</html>

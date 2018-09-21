@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin-top:80px;
+				margin-left:400px;
+			}
+			.box{
+				width: 400px;
+				height:500px;
+				perspective: 500;
+				-webkit-perspective: 500;
+				background: #666;
+            	transition: all 1s;
+			}
+			.columns{
+				width: 40px;
+				height:40px;
+				background: #ccc;
+				position: absolute;
+				top: 200px;
+				left:50px;
+				/*transform-style: preserve-3d;*/
+            	/*transform: rotateX(-25deg) rotateY(30deg);*/
+            	transform: rotate(45deg);
+            	transition: all 1s;
+			}
+			.columns div[class^=col1]{
+				width: 40px;
+				height:40px;
+				position: absolute;
+				
+				background: #ff0;
+			}
+			.columns div[class^=col2]{
+				width: 200px;
+				height:40px;
+				position: absolute;
+				background: #0ff;
+			}
+			.columns div[class^=col3]{
+				width: 40px;
+				height:200px;
+				position: absolute;
+				background: #f0f;
+			}
+			.col1A{
+				transform: translateZ(200px);
+			}
+			.col2A{
+				transform-origin: 0 50% 0;
+				transform: rotateY(-90deg);
+			}
+			.col2B{
+				transform-origin: 0% 50% 0;
+				transform: rotateY(-90deg) translateZ(-40px);
+			}
+			.col3A{
+				transform-origin: 50% 0 0;
+				transform: rotateX(90deg);
+			}
+			.col3B{
+				transform-origin: 50% 0 0;
+				transform: rotateX(90deg) translateZ(-40px);
+			}
+			.box:hover .columns{
+				transform-style: preserve-3d;
+            	transform: rotateX(0deg) rotate(45deg);
+			}
+			.box:hover{
+				transform-style: preserve-3d;
+				transform: rotateX(45deg);
+			}
+			.columns1{
+				left:150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="columns">
+				<div class="col1"></div>
+				<div class="col2A"></div>
+				<div class="col3A"></div>
+				<div class="col3B"></div>
+				<div class="col2B"></div>					
+				<div class="col1A"></div>
+			</div>
+			<div class="columns columns1">
+				<div class="col1"></div>
+				<div class="col2A"></div>
+				<div class="col3A"></div>
+				<div class="col3B"></div>
+				<div class="col2B"></div>					
+				<div class="col1A"></div>
+			</div>
+		</div>
+	</body>
+</html>

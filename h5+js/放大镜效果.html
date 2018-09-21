@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>放大镜效果</title>
+    <style type="text/css">
+        #fdj{
+            width: 1154px;
+            margin: 20px auto;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #small{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #000;
+            float: left;
+            position: relative;
+        }
+        #small div{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            cursor: move;
+        }
+        #big{
+            width: 540px;
+            height: 540px;
+            border: 1px solid #000;
+            float: left;
+            display: none;
+            overflow: hidden;
+            position: relative;
+        }
+        #big img{
+            display: block;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div id="fdj">
+    <div id="small">
+        <img src="img/small.jpg" alt="">
+        <div id="pop"></div>
+    </div>
+    <div id="big">
+        <img src="img/big.jpg" alt="" width="1890" height="1890">
+    </div>
+</div>
+<script type="text/javascript">
+    var picsmall=document.getElementById('small')
+    var big=document.getElementById('big')
+    var picbig=big.children[0]
+    // console.log(picbig)
+    var box=document.getElementById('pop')
+    picsmall.onmouseover=function()
+    {
+        box.style.display='block'
+        big.style.display='block'
+        window.onmousemove=function(eve){ 
+	        var ev=eve||window.event
+	        var boxX=picsmall.offsetLeft
+	        var boxY=picsmall.offsetTop 
+	        var x = ev.clientX-boxX-box.offsetWidth/2
+	        var y =ev.clientY-boxY-box.offsetHeight/2
+	        //???
+	        if (x<0) 
+	        {
+	            x=0
+	        }else if (x>picsmall.offsetWidth-box.offsetWidth) 
+	        {
+	            x=picsmall.offsetWidth-box.offsetWidth
+	        }
+	        if (y<0) 
+	        {
+	            y=0
+	        }else if (y>picsmall.offsetHeight-box.offsetHeight) 
+	        {
+	            y=picsmall.offsetHeight-box.offsetHeight
+	        }
+	        box.style.left=x+'px'
+	        box.style.top=y+'px'
+	        picbig.style.left=-x*5.4+'px'
+	        picbig.style.top=-y*5.4+'px'
+        }
+    }
+    picsmall.onmouseout=function()
+    {
+        box.style.display='none'
+        big.style.display='none'
+        window.onmousemove=null
+    }
+</script>
+</body>
+
+</html>

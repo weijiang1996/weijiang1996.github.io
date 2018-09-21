@@ -1,0 +1,84 @@
+			/*主体第一部分设计,照片墙*/
+			#container1{
+				width: 1200px;
+				height:540px;
+				background-image: url(../img2/bgkongfu.jpg);
+				background-size: 100% 540px;
+				margin: 0 auto;
+				position: relative; 
+			}
+			/*给图片统一设置样式*/
+			#container1 img{
+				width:280px;
+				height:200px;
+				position: absolute; 
+			    border:2px solid #808080;
+			    transition:0.5s; 
+			    box-shadow: 3px 3px 3px #ccc;
+			}
+			/*第1张图片样式,优先级和角度*/
+			.fest1{ 
+			    left:60px; 
+			    top:60px; 
+			    transform:rotate(20deg); 
+			    z-index: 1;
+			}
+			/*第2张图片样式,优先级和角度*/
+			.fest2{ 
+			    left:420px; 
+			    top:80px; 
+			    transform:rotate(30deg); 
+			    z-index: 1;
+			}
+			/*第3张图片样式,优先级和角度*/
+			.fest3{ 
+			    left:800px; 
+			    top:70px; 
+			    transform:rotate(-30deg); 
+			    z-index: 1;
+			}
+			/*第4张图片样式,优先级和角度*/
+			.fest4{ 
+			    left:150px; 
+			    top:250px; 
+			    transform:rotate(-25deg); 
+			    z-index: 1;
+			}
+			/*第5张图片样式,优先级和角度*/
+			.fest5{ 
+			    left:550px; 
+			    top:280px; 
+			    transform:rotate(-20deg); 
+			    z-index: 1;
+			}
+			/*给图片设置hover,优先局*/
+			#container1 img:hover { 
+			    transform:rotate(0deg); 
+			    box-shadow: 6px 6px 6px #8ccc; 
+			    z-index: 2;
+			}
+			/*点击图片显示对应的文字*/
+			.container2{
+				width: 1200px;
+				height: 500px;
+				background-image:url(../img2/bgkongfu.jpg);
+				background-size: 100% 500px;
+				margin: 0 auto;
+			}
+			.con1{
+				width: 350px;
+				height: 200px;
+				margin-left:40px;
+				float: left;
+			}
+			.p5{
+				text-indent: 30px;
+				font-size: 15px;
+				padding: 10px;
+			}
+			.p6{
+				padding: 5px;
+				font-size:20px;
+				color:goldenrod;
+				text-align: center;
+			}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="js/art-painting.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/art.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			
+			<!--导航栏，用列表ul-li实现-->
+			<div id="nav">
+				<div id="navzi">
+					<ul id="ul1">
+				<a href="index.html"><li>首页</li></a>
+				<a href="custom.html"><li>传统民俗
+					<ul class="list1">
+						<a href='custom.html'><li>民间工艺</li></a>
+						<a href='festival.html'><li>节日习俗</li></a>
+						<a href='kongfu.html'><li>中华武术</li></a>
+					</ul>
+				</li></a>
+				<a href='art-drama.html'><li>传统艺术
+					<ul class="list1">
+						<a href='art-drama.html'><li>戏曲</li></a>
+						<a href='art-calligraphy.html'><li>书法</li></a>
+						<a href='art-painting.html'><li>国画</li></a>
+					</ul>
+				</li></a>
+				<a href='儒家.html'><li>诸子百家
+					<ul class="list1">
+						<a href='儒家.html'><li>儒家学派</li></a>
+						<a href='道家.html'><li>道家学派</li></a>
+						<a href='墨家.html'><li>墨家学派</li></a>
+					</ul>
+				</li></a>
+				<a href='artist.html'><li>饮食文化
+					<ul class="list1">
+						<a href='artist.html'><li>饮食艺术</li></a>
+						<a href="food.html"><li>饮食文化发展史</li></a>
+						<a href='Food_drink.html'><li>八大菜系</li></a>
+					</ul>
+				</li></a>
+				<a href="contact.html"><li>联系我们</li></a>
+				</ul>
+				</div>
+			</div>
+			
+			
+			<!--主体部分-->
+			<div id="main" class="main">
+				
+				<!--
+					主体头部为轮播图
+					界面效果：页面加载完后，每隔大概一秒的时间，就切换图片，循环播放
+							用户也可以通过点击轮播上的左右按键，自行控制上一张或下一张图片
+					实现方法：
+							通过js改变图片的display样式（block和none），实现图片切换
+							通过设置定时器（setinterval）进行循环
+							通过给左右按键注册点击事件，在事件中修改图片display样式
+				-->
+				<div id="main-pic" class="mainhead">
+					<div id="box" class="mainheadImg">
+						
+						<!--轮播图的三张图片-->
+						<ul id="ulimg">
+							<li style="display: block;"><img src="img3/2.jpg"/></li>
+							<li><img src="img3/2b.jpg"/></li>
+							<li><img src="img3/2c.jpg"/></li>
+						</ul>
+						<!--轮播图左右键-->
+						<div id="arr">
+							<div id="arrLeft"> < </div>
+							<div id="arrRight"> > </div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!--主体内容-->
+				<div id="main-body">
+					
+					<!--设置三个导航菜单（京剧，书法，国画），用3个div实现-->
+					<div id="selc">
+						<a href="art-drama.html">
+							<div id="selctop">
+								戏剧
+						
+							</div>
+						</a>
+						<a href="art-calligraphy.html">
+							<div id="selcmiddle">
+								书法
+							</div>
+						</a>
+						<a href="art-painting.html">
+							<div id="selcbottom">
+								国画
+							</div>
+						</a>
+					</div>
+					
+					
+					<!--
+						国画的简介与相关作品欣赏
+						界面效果：三个菜单选项（人物画、山水画、花鸟画）以图片的形式展示，鼠标在图片上方时，
+								相应图片略微放大，并附带阴影视觉效果，通过点击相应类别的图片
+								可以跳到页面中该类别的作品展示部分
+						实现方法：通过css样式，在每个作品模块上添加hover样式，hover中添加
+								box-shadow,实现简单阴影效果
+								为每个类别的作品模块设置id,通过a标签，实现跳转到相应Id模块
+					-->
+					
+					
+					<div id="painfu">
+						<div id="pain" class="pain">
+							
+							<!--内容：国画的简介，百科-->
+							<div class="paintext">
+								<img src="img3/空白.png"/>
+								
+									<span>国画 （中国传统绘画形式）</span>
+								<p>
+									国画一词起源于汉代，汉朝人认为中国是居天地之中者，所以称为中国，将中国的绘画称为“中国画”，简称“国画”。主要指的
+
+									是画在绢、宣纸、帛上并加以装裱的卷轴画。国画是中国的传统绘画形式，是用毛笔蘸水、墨、彩作画于绢或纸上。工具和材料有
+
+									毛笔、墨、国画颜料、宣纸、绢等，题材可分人物、山水、花鸟等，技法可分具象和写意。中国画在内容和艺术创作上，体现了古
+
+									人对自然、社会及与之相关联的政治、哲学、宗教、道德、文艺等方面的认知。
+								</p>
+								
+									<span>起源</span>
+								<p>
+									中国画起源古代，象形字，奠基础；文与画在当初，无歧异，本是一个意思。我国夙有书画同源之说，有人认为伏羲画卦、仓颉造
+
+									字，是为书画之先河。文字与画图初无歧异之分
+								</p>
+								
+									<span>分类</span>
+								<p>
+									中国画主要分为人物、花鸟、山水这几大类。表面上，中国画是以题材分为这几类，其实是用艺术表现一种观念和思想。所谓“画
+
+									分三科”，即概括了宇宙和人生的三个方面：人物画所表现的是人类社会，人与人的关系;山水画所表现的是人与自然的关系，将
+
+									人与自然融为一体;花鸟画则是表现大自然的各种生命，与人和谐相处。中国画之所以分为人物、花鸟、山水这几大类，其实是由
+
+									艺术升华的哲学思考，三者之合构成了宇宙的整体，相得益彰，是艺术之为艺术的真谛所在
+								</p>
+							</div>
+							
+							<!--背景图片-->
+							<div id="painmenu" class="painmenu">
+								
+							</div>
+							
+							<!--国画分类的选项列表-->
+							<div id="menufu">
+								<a href="#renwu">
+									<div id="painmenu1">
+										<span>人物画</span>
+									</div>
+								</a>
+								<a href="#shanshui">
+									<div id="painmenu2">
+										<span>山水画</span>
+									</div>
+								</a>
+								<a href="#huaniao">
+									<div id="painmenu3">
+										<span>花鸟画</span>
+									</div>
+								</a>
+							</div>
+							
+						</div>
+						
+						
+						<!--国画的分类（人物画、山水画、花鸟画）与相关作品欣赏-->
+						<div id="painshowfu">
+							<div id="painshow" class="painshow">
+								<div id="renwu">
+									<span>人物画</span><br>
+									<img src="img3/列女图.jpg"/>
+									<img src="img3/文苑图.jpg"/>
+								</div>
+								<div id="shanshui">
+									<span>山水画</span><br>
+									<img src="img3/传统分法有水墨,青绿,金碧,没骨,浅绛,淡彩等形式..jpg"/>
+									<img src="img3/诗中有画,画中有诗,水墨山水的集大成者——王维.jpg"/>
+								</div>
+								<div id="huaniao">
+									<span>花鸟画</span><br>
+									<img src="img3/林风眠水鸟.jpg"/>
+									<img src="img3/鲤鱼.jpg"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="footer">
+				<p class="footp">团队：小小<br>成员：林泽伟、池少辉、钟胜福、洪嘉隆</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

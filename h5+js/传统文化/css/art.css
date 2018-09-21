@@ -1,0 +1,679 @@
+body{
+	height: 100%;
+	background: #fafafa;
+}
+/*设置导航样式*/
+.homenav{
+	//top: 0;
+	//position: fixed;
+	width: 100%;
+	height: 86px;
+	z-index: 100;
+	background: #f0f0f0;
+}
+.nav-img{
+	padding-left: 40px;
+	float: none;
+	display: inline-block;
+	margin: 0px;
+}
+.nav-img img{
+	height: 82px;
+}
+.navbar{
+	float: right;
+	width: auto;
+	margin: 16px;
+	/*position: ;*/
+}
+.navbar li{
+	list-style: none;
+	//display: inline-block;
+	position: relative;
+	float: left;
+	text-align: center;
+	font-family: "华文行楷";
+	font-size: 28px;
+	margin: 10px;
+}
+.navbar li a{
+	text-decoration: none;
+	color: #000000;
+}
+
+
+/*主题内容样式*/
+
+
+.main{
+	margin-top: 85px;
+	//position: relative;
+}
+/*轮播图样式*/
+.mainhead{
+	width: 100%;
+}
+.mainheadImg{
+	width: 1004px;
+	margin: auto;
+	position: relative;
+}
+.mainheadImg img{
+	width: 1004px;
+	height: 450px;
+	position: relative;
+}
+.mainheadImg ul{
+	list-style: none;
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.mainheadImg ul li{
+	width:100% ;
+	height: 450px;
+	float: left;
+	display: none;
+}
+#main-body{
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+/*轮播图中左右键样式*/
+#arr{
+	width: 1004px;
+	position: absolute;
+	top: 50%;
+}
+
+#arrLeft{
+	float: left;
+	margin-left: 15px;
+}
+#arrRight{
+	float: right;
+	margin-right: 15px;
+}
+#arrLeft,#arrRight{
+	width: 40px;
+	height: 60px;
+	font-size: 30px;
+	background: rgba(0,0,0,.3);
+	padding-top: 15px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*设置三个导航菜单（京剧，书法，国画）的样式*/
+#selc{
+	width: 350px;
+	height: 300px;
+	//background: red;
+	float: right;
+	position: absolute;
+	z-index: 80;
+	top: 0;
+	right: 0;
+}
+#selc a{
+	color: #000000;
+}
+#selctop,#selcmiddle,#selcbottom{
+	width: 120px;
+	height: 100px;
+	position: absolute;
+	line-height: 100px;
+	text-align: center;
+	font-size: 35px;
+	font-family: "华文琥珀";
+	border-radius: 50px;
+}
+#selctop{
+	background: hotpink;
+	left:60px ;
+}
+#selcmiddle{
+	background: gray;
+	top: 100px;
+	left: 0;
+}
+#selcbottom{
+	background: lightskyblue;
+	top: 200px;
+	left: 60px;
+}
+#selctop:hover,#selcbottom:hover{
+	left: 30px;	
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: ease;
+}
+#selcmiddle:hover{
+	left: 30px;	
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: ease;
+}
+
+
+
+
+
+
+/*戏剧部分*/
+
+#dramafu{
+	width: 100%;
+	height: auto;
+}
+.drama{ 
+	width: 1100px;
+	//height: 500px;
+	margin: 0 auto;
+	//background: red;
+}
+
+/*戏剧简介部分字体段落样式*/
+.dramatext{
+	width: 920px;
+	font-size: 14px;
+	font-family: "宋体";
+	padding-bottom: 50px;
+	
+}
+.dramatext p{
+	text-indent: 2em;
+}
+.dramatext img{
+	width: 300px;
+	float: left;
+}
+.dramatext span{
+	font-size:16px ;
+	font-weight: bolder;
+	
+}
+
+/*戏剧类别作品部分样式*/
+#dramaAchieFu{
+	width: 100%;
+	
+}
+.dramaAchie{
+	width: 1140px;
+	margin: 0 auto;
+}
+.dramaAchie span:nth-of-type(1){
+	font-size: 22px;
+	font-family: "楷体";
+	font-weight: bolder;
+}
+.dramaAchie span:nth-of-type(2){
+	//font-size: 22px;
+	font-family: "微软雅黑";
+	float: left;
+	color: dimgray;
+}
+.dramaAchie img{
+	border: solid burlywood 10px;
+	width: 500px;
+	height: 355px;
+	margin-bottom: 10px;
+}
+#pic1,#pic2,#pic3,#pic4{
+	width: 500px;
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 60px;
+	padding-right: 40px;
+	
+}
+#pic1:hover,#pic2:hover,#pic3:hover,#pic4:hover{
+	box-shadow: -5px 5px 8px gray;
+}
+
+
+
+/*书法部分*/
+
+#callifu{
+	width: 100%;
+	height: auto;
+}
+.calli{ 
+	width: 1100px;
+	//height: 500px;
+	margin: 0 auto;
+	//background: red;
+}
+/*书法简介部分字体段落样式*/
+.callitext{
+	width: 920px;
+	font-size: 14px;
+	font-family: "宋体";
+	padding-bottom: 50px;
+}
+.callitext p{
+	text-indent: 2em;
+}
+.callitext img{
+	width: 500px;
+	height: 150px;
+	float: right;
+}
+.callitext span{
+	font-size:16px ;
+	font-weight: bolder;
+	
+}
+
+/*书法类别（篆书/隶书/楷书/草书行书)作品*/
+#collishowFu{
+	width: 100%;
+	
+}
+.collishow{
+	width: 1140px;
+	margin: 0 auto;
+}
+
+/*书法分类的选项列表样式*/
+#showLeft{
+	float: left;
+	width:200px;
+	height: 150px;
+	background:#e9e5d9;
+}
+#showLeft ul{
+	width: 200px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#showLeft ul li{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	//cursor: pointer;
+}
+#zhuan,#kai,#li,#cao,#hang{
+	width: 900px;
+	height: 110px;
+	padding: 20px;
+	display: none;
+	font-family: "宋体";
+	font-size: 15px;
+}
+/*五种书法类别的简介的字体段落样式*/
+#showBody{
+	float: left;
+	width: 940px;
+	height: 150px;
+	background: #a9a397;
+}
+#showBody p{
+	text-indent: 2em;
+}
+#showBody span{
+	font-size: 22px;
+	font-family: "楷体";
+	font-weight: bolder;
+}
+#showBody .appear{
+
+	display: block;
+}
+#zhuanpic,#kaipic,#lipic,#caopic,#hangpic{
+	width: 1100px;
+	height: 540px;
+	padding: 20px;
+	display: none;
+}
+/*五种书法类别的相关作品的样式*/
+#showBottom{
+	clear: both;
+	width: 1140px;
+	height: 580px;
+	background: goldenrod;
+}
+
+
+#showBottom img{
+	width: 1100px;
+	height: 540px;
+}
+#showBottom .picappear{
+
+	display: block;
+}
+
+
+
+/*国画部分*/
+
+#painfu{
+	width: 100%;
+	height: auto;
+}
+.pain{ 
+	width: 1200px;
+	height: 375px;;
+	height: 820px;
+	margin: 0 auto;
+	background-image: url(../img3/bg.jpg);
+	background-size: 1200px;
+	background-repeat: no-repeat;
+	position: relative;
+}
+/*书法简介部分字体段落样式*/
+.paintext{
+	width: 900px;
+	font-size: 14px;
+	font-family: "宋体";
+	padding-bottom: 10px;
+	padding: 30px;
+}
+.paintext p{
+	text-indent: 2em;
+}
+.paintext img{
+	width: 150px;
+	//height: 150px;
+	float: left;
+}
+.paintext span{
+	font-size:16px ;
+	font-weight: bolder;
+}
+
+
+/*国画分类的选项列表样式*/
+.painmenu{
+	width: 800px;
+	height: 300px;
+	background: red;
+	position: absolute;
+	top: 310px;
+	left: 16.7%;
+	background-image: url(../img3/bg2.jpg);
+	background-size: cover;
+}
+#painmenu1,#painmenu2,#painmenu3{
+	width: 220px;
+	height: 350px;
+	z-index: 60;
+	position: absolute;
+}
+#painmenu1{
+	top: 440px;
+	left: 33%;
+	background-image: url(../img3/人物.jpg);
+	background-size: cover;
+}
+#painmenu2{
+	top: 440px;
+	left: 54%;
+	background-image: url(../img3/山水.jpg);
+	background-size: cover;
+}
+#painmenu3{
+	top: 440px;
+	left: 75%;
+	background-image: url(../img3/花鸟.jpg);
+	background-size: cover;
+}
+#painmenu1 span,#painmenu2 span,#painmenu3 span{
+	position: absolute;
+	display: block;
+	bottom: 10px;
+	left: 33%;
+	font-size: 24px;
+	font-weight: bolder;
+	color: #FFFFFF;
+}
+#painmenu1:hover,#painmenu2:hover,#painmenu3:hover{
+	transform: scale(1.1);
+}
+
+
+/*国画的分类（人物画、山水画、花鸟画）与相关作品样式*/
+#painshowfu{
+	width: 100%;
+	height: auto;
+}
+.painshow{ 
+	width: 1200px;
+	margin: 0 auto;
+	
+}
+.painshow span{
+	display: block;
+	width: 100px;
+	font-size: 30px;
+	font-weight: bolder;
+	margin: 0 auto;
+}
+/*人物画样式*/
+#renwu img:nth-of-type(1){
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#renwu img:nth-of-type(2){
+	width: 1100px;
+	height: 430px;
+	padding: 50px;
+}
+/*山水画样式*/
+#shanshui img:nth-of-type(1){
+	width: 1200px;
+	/*padding-left: 50px;
+	padding-right: 50px;*/
+	height: 450px;
+	
+}
+#shanshui img:nth-of-type(2){
+	width: 1000px;
+	/*padding-left: 100px;
+	padding-right: 100px;*/
+	padding:50px 100px;
+	height: 450px;
+}
+/*花鸟画样式*/
+#huaniao img:nth-of-type(1){
+	width: 800px;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+#huaniao img:nth-of-type(2){
+	width: 1100px;
+	height: 430px;
+	padding: 50px;
+}
+#main-headfu{
+	width: 100%;
+	height: 540px;
+	position: relative;
+}
+
+
+
+
+/*联系我们即contact页面样式*/
+
+
+#main-head{
+	margin-top: 80px;
+	width: 100%;
+	height: 600px;
+	margin-bottom: 30px;
+}
+#main-head img{
+	width: 100%;
+	height: 500px;
+}
+#text{
+	position: absolute;
+	bottom: 16%;
+	left: 33%;
+	font-size: 65px;
+	font-family:"gill sans ultra bold";
+	font-weight: bolder;
+	color: deepskyblue;
+}
+#main-body{
+	width: 100%;	
+}
+#contfu{
+	width: 1200px;
+	margin: 0 auto;
+}
+#conleft{
+	width: 300px;
+	height: 460px;
+	margin: 0 20px;
+	float: left;
+	background: #e37336;
+}
+#conmain{
+	width: 820px;
+	height: 400px;
+	float: left;
+}
+#contop{
+	width: 260px;
+	height: 100px;
+	padding-left: 40px;
+}
+#contop span:nth-of-type(1){
+	display: block;
+	//text-align: center;
+	color: #FFFFFF;
+	font-size: 15px;
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+#contop span:nth-of-type(2){
+	display: block;
+	//text-align: center;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+#conmiddle{
+	width: 260px;
+	padding-left: 40px;
+	height: 100px;
+}
+#conmiddle span{
+	display: block;
+	//text-align: center;
+	color: #FFFFFF;
+	font-size: 15px;
+	line-height: 100px
+}
+#conbottom{
+	width: 260px;
+	padding-left: 40px;
+	padding-top: 40px;
+	height: 220px;
+}
+#conbottom img{
+	width: 15px;
+	padding-right: 10px;
+	
+}
+#conbottom span{
+	display: block;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 10px 0;
+}
+#conbottom span:nth-of-type(1){
+	width: 215px;
+	display: inline-block;
+	padding-top: 0;
+	vertical-align: top;
+}
+#conmain span{
+	display: block;
+	height: 55px;
+	margin-top: 20px;
+	font-size: 35px;
+	font-weight: bold;
+	font-family: comic sans ms;
+}
+#form input{
+	width: 380px;
+	height: 27px;
+	margin: 5px 10px;
+}
+#form input:nth-of-type(3){
+	width: 789px;
+}
+#form textarea{
+	width: 789px;
+	height: 210px;
+	margin: 5px 10px;
+	font-size: 16px;
+	line-height: 24px;
+}
+#form>input:last-child{
+	width:796px ;
+	height: 40px;
+	cursor: pointer;
+	border: 2px solid #e37336;
+	background: #FFFFFF;
+}
+#form>input:last-child:hover{
+	background: #e37336;
+}
+#homehead{
+	width: 100%;
+	height: 100%;
+}
+#homehead img{
+	width: 100%;
+	height: 100%;
+}
+
+#homebody{
+	width: 100%;
+}
+#homevideo{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+#homemain{
+				width: 1200px;
+				height: 600px;
+				margin: 0 auto;
+				background: red;
+			}
+			.main1{
+				width: 1200px;
+				height:150px;
+				background: aliceblue;
+			}
+			.main1 img{
+				width:300px;
+				height:150px;
+			}
+			.main2{
+				width:900px;
+				height:150px;
+				background-image: url(img/homebg.jpg);
+				background-size: 100% 150px;
+				float: right;
+			}
+			.mainp{
+				padding:30px;
+				color:goldenrod;
+			}
