@@ -7,7 +7,7 @@
 <a href="https://weijiang1996.github.io/css3/分割效果.html">分割效果</a></br>
 <a href="https://weijiang1996.github.io/css3/svg.html">svg</a></br>
 <a href="https://weijiang1996.github.io/css3/ihover.html">ihover</a></br>
-<a href="https://weijiang1996.github.io/css3/>旋转立方体.html">旋转立方体</a></br>
+<a href="https://weijiang1996.github.io/css3/旋转立方体.html">旋转立方体</a></br>
 
 <h3>h5+js</h3>
 <h3>jq+ajax+bootstrap</h3>
