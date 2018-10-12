@@ -1,0 +1,12 @@
+*{margin:0;padding:0;}
+#box{position:relative;margin:100px auto;width:400px;height:250px;overflow:hidden;border:5px dotted deepskyblue;}
+img{width:400px;height:250px;}
+ul{list-style: none;position: absolute;width:500%;height:250px;}
+ul li{width: 400px;height: 250px;float:left;}
+#point{position: absolute;top:50%;width: 100%;margin-top:-25px;}
+#left,#right{line-height:50px;height:50px;width:50px;text-align:center;background:rgba(0,0,0,0.3);
+	color:white;font-size:25px;font-weight: bold;cursor: pointer;}
+#left{margin-left:5px;float: left;}
+#right{margin-right:5px;float: right;}
+ol{list-style: none;text-align: center;position: absolute;bottom: 10px;left:150px;}
+ol li{width:20px;height:20px;border-radius: 50%;background:rgba(255,255,0,0.4);display: inline-block;}

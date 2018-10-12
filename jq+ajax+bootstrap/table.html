@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			th,td{
+				width:50px;
+				height:20px;
+			}
+			table{border-collapse: collapse;}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h3>员工信息</h3>
+			<table border="1" cellspacing="" cellpadding="">
+				<tr>
+					<th></th>
+					<th>姓名</th>
+					<th>薪水</th>
+					<th>年龄</th>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="one" value="" /></td>
+					<td>张三</td>
+					<td>20000</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="two" value="" /></td>
+					<td>李四</td>
+					<td>22000</td>
+					<td>26</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="three" value="" /></td>
+					<td>王五</td>
+					<td>14000</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="four" value="" /></td>
+					<td>马六</td>
+					<td>15000</td>
+					<td>21</td>
+				</tr>
+			</table>
+		</div>
+		 <script src="js/jquery-3.3.1.min.js"></script>
+		 <script type="text/javascript">
+		 	$(function(){
+		 		$("tr:eq(0)").css("background","plum");
+			 	$("tr:has(td):odd").css("background","gainsboro");
+			 	$("tr:has(td):even").css("background","lightblue");
+			 	$("#one").click(function(){
+			 		if(($("#one").prop("checked")) == true){
+			 			$("tr:has(td):eq(0)").css("background","yellow");
+			 		}else{
+			 			$("tr:has(td):eq(0)").css("background","gainsboro");
+			 		}
+			 	})
+			 	$("#two").click(function(){
+			 		if(($("#two").prop("checked")) == true){
+			 			$("tr:has(td):eq(1)").css("background","yellow");
+			 		}else{
+			 			$("tr:has(td):eq(1)").css("background","lightblue");
+			 		}
+			 	})
+			 	$("#three").click(function(){
+			 		if(($("#three").prop("checked")) == true){
+			 			$("tr:has(td):eq(2)").css("background","yellow");
+			 		}else{
+			 			$("tr:has(td):eq(2)").css("background","gainsboro");
+			 		}
+			 	})
+			 	$("#four").click(function(){
+			 		if(($("#four").prop("checked")) == true){
+			 			$("tr:has(td):eq(3)").css("background","yellow");
+			 		}else{
+			 			$("tr:has(td):eq(3)").css("background","lightblue");
+			 		}
+			 	})
+		 	})
+		 </script>
+	</body>
+</html>
