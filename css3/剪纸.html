@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>剪纸</title>
+		<style type="text/css">
+			body{
+				background: rgba(37,141,218,0.9);
+				text-align: center;
+			}
+			p{
+				margin-top:200px;
+			}
+			p span{
+				position: relative;
+				color:wheat;
+				font-size: 100px;
+				height: 100px;
+				line-height: 100px;
+				margin-left:20px;
+				font-weight: bold;
+				display: inline-block;
+				position: relative;
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+				-webkit-perspective: 500;
+				perspective: 500;
+				-webkit-font-smoothing: antialiased;
+				cursor:default;
+			}
+			p span::before,
+			p span::after{
+				/*display: none;*/
+				position: absolute;
+				top:0;
+				left:-1px;
+				-webkit-transform-origin: left top;
+				-ms-transform-origin: left top;
+				transform-origin: left top;
+				-webkit-transition: all ease-out 0.3s;
+				transition: all ease-out 0.3s;
+				content:attr(data-text);
+			}
+			p span::before{
+				z-index: 1;
+				color:rgba(0,0,0,0.2);
+				-webkit-transform: scale(1.1, 1) skew(0deg, 25deg);
+				-ms-transform:scale(1.1,1) skew(0deg,25deg);
+				transform:scale(1.1,1) skew(0deg,25deg);
+			}
+			p span:hover::before{
+				-webkit-transform: scale(1.1, 1) skew(0deg, 3deg);
+				-ms-transform:scale(1.1,1) skew(0deg,3deg);
+				transform:scale(1.1,1) skew(0deg,3deg);
+			}
+			p span::after{
+				z-index: 2;
+				color:rgba(218,141,35,0.9);
+				-webkit-transform: scale(1.1, 1) skew(0deg, 10deg) rotateY(-45deg);
+				-ms-transform:scale(1.1,1) skew(0deg,10deg) rotateY(-45deg);
+				transform:scale(1.1,1) skew(0deg,10deg) rotateY(-45deg);
+			}
+			p span:hover::after{
+				-webkit-transform:skew(0deg, 0deg);
+				-ms-transform:skew(0deg,0deg);
+				transform:skew(0deg,0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<p aria-label="PeeledText">
+			<span data-text="生">生</span>
+			<span data-text="生">生</span>
+			<span data-text="灯">灯</span>
+			<span data-text="火">火</span>
+			<span data-text="明">明</span>
+			<span data-text="暗">暗</span>
+			<span data-text="无">无</span>
+			<span data-text="辄">辄</span>
+		</p>
+	</body>
+	<!--http://www.htmleaf.com/Demo/201510232701.html-->
+</html>

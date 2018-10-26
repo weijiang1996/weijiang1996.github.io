@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas1" width="500" height="500" style="border: 1px solid deepskyblue;"></canvas>
+		<!--<canvas id="canvas2" width="500" height="500" style="border: 1px solid deepskyblue"></canvas>-->
+		
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas1");
+			var ctx = canvas.getContext("2d");
+			
+			ctx.fillStyle = "ghostwhite";
+			ctx.fillRect(0,0,500,500);
+			
+			ctx.beginPath();
+			ctx.arc(250,200,100,0,2*Math.PI);
+			ctx.lineWidth = 5;
+			ctx.stroke();
+			ctx.fillStyle = "green";
+			ctx.fillRect(250,92,3,5);
+			
+			ctx.beginPath();
+			ctx.strokeStyle = 'green';
+	        ctx.fillStyle="lawngreen";
+	        ctx.lineWidth = 2;
+	        ctx.moveTo(250,92);
+	        ctx.lineTo(230,85);
+	        ctx.lineTo(215,65);
+	        ctx.lineTo(240,75);
+	        ctx.lineTo(250,92);
+	        ctx.stroke();
+    		ctx.fill();
+    		
+    		ctx.beginPath();
+			ctx.strokeStyle = 'green';
+	        ctx.fillStyle="lawngreen";
+	        ctx.lineWidth = 2;
+	        ctx.moveTo(250,92);
+	        ctx.lineTo(270,87);
+	        ctx.lineTo(290,68);
+	        ctx.lineTo(260,75);
+	        ctx.lineTo(250,92);
+	        ctx.stroke();
+    		ctx.fill();
+    		
+    		ctx.beginPath();
+	        ctx.lineWidth = 5;
+	        ctx.moveTo(200,160);
+	        ctx.lineTo(220,170);
+	        ctx.lineTo(200,180);
+	        ctx.stroke();
+	        
+	        ctx.beginPath();
+	        ctx.lineWidth = 5;
+	        ctx.moveTo(300,160);
+	        ctx.lineTo(280,170);
+	        ctx.lineTo(300,180);
+	        ctx.stroke();
+	        
+	        function ParamEllipse(context, x, y, a, b){
+			   //max是等于1除以长轴值a和b中的较大者
+			   //i每次循环增加1/max，表示度数的增加
+			   //这样可以使得每次循环所绘制的路径（弧线）接近1像素
+			   var step = (a > b) ? 1 / a : 1 / b;
+			   context.beginPath();
+			   ctx.strokeStyle = 'white';
+			   context.moveTo(x + a, y); //从椭圆的左端点开始绘制
+			   for (var i = 0; i < 2 * Math.PI; i += step)
+			   {
+			      //参数方程为x = a * cos(i), y = b * sin(i)，
+			      //参数为i，表示度数（弧度）
+			      context.lineTo(x + a * Math.cos(i), y + b * Math.sin(i));
+			   }
+			   context.closePath();
+			   context.stroke();
+			  // 创建渐变
+				var grd=ctx.createLinearGradient(x-a,y,x+a,y);
+				grd.addColorStop(0,"red");
+				grd.addColorStop(1,"white");
+				 
+				// 填充渐变
+				context.fillStyle=grd;
+				context.fill();
+			};
+			ParamEllipse(ctx, 190, 200, 10, 5);
+			ParamEllipse(ctx, 310, 200, 10, 5);
+			
+			ctx.font="25px 微软雅黑";
+			var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
+			gradient.addColorStop("0","magenta");
+			gradient.addColorStop("0.5","blue");
+			gradient.addColorStop("1.0","red");
+			// 用渐变填色
+			ctx.fillStyle=gradient;
+			ctx.fillText("嘘~别打扰我吃糖^_^",140,30);
+			
+			var circle = function (x, y, radius) {
+		        ctx.beginPath();
+		        ctx.arc(x,y,radius,0,Math.PI*2,false);
+		        ctx.stroke();
+		    };
+		    ctx.lineWidth = 2;
+		    ctx.fillStyle = "purple";
+		    circle(250,250,5);
+		    ctx.fill();
+		    ctx.strokeStyle = "blue";
+		    circle(250,250,8);
+		    ctx.strokeStyle = "yellow";
+		    circle(250,250,11);
+		    ctx.strokeStyle = "green";
+		    circle(250,250,14);
+		    ctx.strokeStyle = "orange";
+		    circle(250,250,17);
+		    ctx.strokeStyle = "deeppink";
+		    circle(250,250,20);
+		    ctx.strokeStyle = "red";
+		    circle(250,250,23);
+		    
+			ctx.fillStyle = "black";
+			ctx.fillRect(247,300,6,150);
+			ctx.fillRect(87,330,160,6);
+			ctx.fillRect(247,330,160,6);
+			
+			ctx.fillStyle = "brown";
+			ctx.fillRect(247,273,6,50);
+			ctx.fillRect(87,120,6,320);
+			
+			ctx.fillStyle = "gray";
+			ctx.fillRect(50,70,80,50);
+			ctx.beginPath();
+			ctx.strokeStyle = "gray";
+			ctx.arc(50,95,24,0.5*Math.PI,1.5*Math.PI);
+			ctx.moveTo(125,95);
+			ctx.arc(125,95,24,0.5*Math.PI,1.5*Math.PI,true);
+			ctx.lineWidth = 1;
+			ctx.stroke();
+			ctx.fill();
+			
+			ctx.fillStyle = "red";
+			ctx.fillText("10t",70,105);		
+		</script>
+	</body>
+</html>
