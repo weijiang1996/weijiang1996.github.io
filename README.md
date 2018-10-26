@@ -24,4 +24,5 @@
 * [boostrap页面排版](https://weijiang1996.github.io/jq+ajax+bootstrap/nav.html)
 * [获取图片](https://weijiang1996.github.io/jq+ajax+bootstrap/js-photo.html)
 * [淘宝搜索](https://weijiang1996.github.io/jq+ajax+bootstrap/淘宝搜索.html)
+* [天气API](https://weijiang1996.github.io/jq+ajax+bootstrap/tianqi.html)
 
