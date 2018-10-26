@@ -17,5 +17,7 @@
 * [选项卡](https://weijiang1996.github.io/h5+js/下拉列表.html)
 * [国庆倒计时](https://weijiang1996.github.io/h5+js/国庆倒计时.html)
 * [全选+反选+取消](https://weijiang1996.github.io/h5+js/全选+反选+取消.html)
+* [表单验证](https://weijiang1996.github.io/h5+js/表单验证.html)
 ***
 ## jq+ajax+bootstrap
+
