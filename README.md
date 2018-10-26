@@ -1,5 +1,4 @@
 ## css3
-
 * [变形旋转](https://weijiang1996.github.io/css3/变形旋转.html)
 * [柱状图](https://weijiang1996.github.io/css3/柱状图.html)
 * [ihover](https://weijiang1996.github.io/css3/ihover.html)
@@ -11,5 +10,12 @@
 * [hover-btn](https://weijiang1996.github.io/css3/hover-btn.html)
 ***
 ## h5+js
-
+* [放大镜效果](https://weijiang1996.github.io/h5+js/放大镜效果.html)
+* [随机验证码](https://weijiang1996.github.io/h5+js/随机验证码.html)
+* [简单万年历](https://weijiang1996.github.io/h5+js/简单万年历.html)
+* [轮播图](https://weijiang1996.github.io/h5+js/轮播图.html)
+* [选项卡](https://weijiang1996.github.io/h5+js/下拉列表.html)
+* [国庆倒计时](https://weijiang1996.github.io/h5+js/国庆倒计时.html)
+* [全选+反选+取消](https://weijiang1996.github.io/h5+js/全选+反选+取消.html)
+***
 ## jq+ajax+bootstrap
