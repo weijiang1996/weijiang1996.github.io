@@ -8,7 +8,7 @@
 * [svg](https://weijiang1996.github.io/css3/svg.html)
 * [旋转立方体](https://weijiang1996.github.io/css3/旋转立方体.html)
 * [hover-btn](https://weijiang1996.github.io/css3/hover-btn.html)
-***
+
 ## h5+js
 * [放大镜效果](https://weijiang1996.github.io/h5+js/放大镜效果.html)
 * [随机验证码](https://weijiang1996.github.io/h5+js/随机验证码.html)
@@ -18,7 +18,7 @@
 * [国庆倒计时](https://weijiang1996.github.io/h5+js/国庆倒计时.html)
 * [全选+反选+取消](https://weijiang1996.github.io/h5+js/全选+反选+取消.html)
 * [表单验证](https://weijiang1996.github.io/h5+js/表单验证.html)
-***
+
 ## jq+ajax+bootstrap
 * [jq放大镜](https://weijiang1996.github.io/jq+ajax+bootstrap/jq放大镜.html)
 * [boostrap页面排版](https://weijiang1996.github.io/jq+ajax+bootstrap/nav.html)
