@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天气API</title>
+    <style type="text/css">
+    	input{
+    		border: none;
+    		padding:0;
+    		-webkit-tap-highlight-color:rgba(0,0,0,0); 
+    		outline:none;
+    	}
+    	.box1{
+    		width:500px;
+    		height:30px;
+    		margin:0 auto;
+    	}
+    	#weather{
+    		width:436px;
+    		height:26px;
+    		border:2px solid deepskyblue;
+    		padding-left:10px;
+    	}
+    	#search{
+    		width:50px;
+    		height:30px;
+    		line-height:30px;
+    		background: deepskyblue;
+    		letter-spacing: 2px;
+    		vertical-align: bottom;
+    		color:white;
+    		cursor: pointer;
+    	}
+    </style>
+</head>
+<body>
+	<div class="box1">
+		<input type="text" name="weather" id="weather" placeholder="请输入城市"/><input type="button" name="search" id="search" value="搜索" />
+	</div>
+	<h3>天气</h3>
+	<ul id="box"></ul>
+	<h3>小时天气</h3>
+	<ul id="hours"></ul>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$("#search").click(function(){
+			var city = $("#weather").val();
+			$.ajax({
+		        type: 'GET',
+		        url: 'https://www.tianqiapi.com/api/',
+		        data: 'version=v1&city='+city,
+		        dataType: 'JSON',
+		        error: function () {
+		            alert('网络错误');
+		        },
+		        success: function (res) {
+		        	$('#box').empty();
+		            $('#box').append('<li>City: ' + res.city + '</li>');
+		            $('#box').append('<li>Weather: ' + res.data[0].wea + '</li>');
+		            $('#box').append('<li>Tips: ' + res.data[0].air_tips + '</li>');
+		            // 遍历数组
+		            $('#hours').empty();
+		            for (var i = 0; i < res.data[0].hours.length; i++) {
+		                $('#hours').append('<li>' + (i + 1) + ': 时间: ' + res.data[0].hours[i].day + ' 气温: ' + res.data[0].hours[i].tem + ' </li >');
+		            }
+		            console.log(res);
+		        }
+		    });
+		})
+	    
+	</script>
+</body>
+</html>
