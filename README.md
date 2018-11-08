@@ -19,6 +19,7 @@
 * [国庆倒计时](https://weijiang1996.github.io/h5+js/国庆倒计时.html)
 * [全选+反选+取消](https://weijiang1996.github.io/h5+js/全选+反选+取消.html)
 * [表单验证](https://weijiang1996.github.io/h5+js/表单验证.html)
+* [购物车](https://weijiang1996.github.io/h5+js/myCart.html)
 
 ## jq+ajax+bootstrap
 * [jq放大镜](https://weijiang1996.github.io/jq+ajax+bootstrap/jq放大镜.html)
