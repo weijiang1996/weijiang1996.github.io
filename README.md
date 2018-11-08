@@ -10,6 +10,7 @@
 * [hover-btn](https://weijiang1996.github.io/css3/hover-btn.html)
 
 ## h5+js
+* [仿百度](https://weijiang1996.github.io/h5+js/百度.html)
 * [传统文化](https://weijiang1996.github.io/h5+js/传统文化/festival.html)
 * [放大镜效果](https://weijiang1996.github.io/h5+js/放大镜效果.html)
 * [随机验证码](https://weijiang1996.github.io/h5+js/随机验证码.html)
